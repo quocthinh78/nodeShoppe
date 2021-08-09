@@ -7,7 +7,7 @@ const getAllProduct = async (req, res, next) => {
 };
 
 const createProduct = async (req, res, next) => {
-    const product = req.body;
+    const  product = req.body;
     const cat = await Category.findById(req.body.id);
     product.owner = cat._id;
     const newProduct = new Product(product);
