@@ -17,7 +17,7 @@ mongoose.connect("mongodb://localhost:27017/shopee", {
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
-
+// thinhss
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
