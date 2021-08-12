@@ -9,7 +9,8 @@ const register = async (req, res) => {
     const user = new User({
         name: req.body.name,
         email: req.body.email,
-        password: passwordhash
+        password: passwordhash,
+        order : null
     })
     const result = await user.save();
     const { password, ...data } = result.toJSON();
