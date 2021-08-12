@@ -12,6 +12,10 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    order : {
+        type: Schema.Types.ObjectId,
+        ref : "Order"
     }
 
 })
