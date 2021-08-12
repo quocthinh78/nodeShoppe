@@ -8,6 +8,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var categoryRouter = require("./routes/category");
 var productRouter = require("./routes/product");
+const orderRouter = require("./routes/order");
 var app = express();
 var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/shopee", {
@@ -33,6 +34,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/product", productRouter);
 app.use("/category", categoryRouter);
+app.use("/order" , orderRouter )
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
