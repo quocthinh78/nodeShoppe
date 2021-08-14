@@ -3,12 +3,11 @@ const Order = require("../models/Order");
 
 const addOrder = async (req , res) => {
     const cartItem = req.body;
-    const user = await User.find({_id : req.body.id});
-    // const cartList = ;
+    const user = await User.findById(req.body.id);
     cartList.push(cartItem);
     const order = await new Order({
         owner : user._id,
-        cart : cartList
+        cart : cartItem
     })
     await order.save();
     user.order = order._id;

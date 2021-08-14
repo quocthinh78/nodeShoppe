@@ -11,7 +11,8 @@ var productRouter = require("./routes/product");
 const orderRouter = require("./routes/order");
 var app = express();
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/shopee", {
+const db = "mongodb+srv://monggodb-shopee:GfQafsGbrISNYpuQ@mongodbshopee.w72gm.mongodb.net/react-shopee?retryWrites=true&w=majority"
+mongoose.connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
