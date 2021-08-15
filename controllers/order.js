@@ -21,7 +21,12 @@ const addOrder = async (req , res) => {
     res.json(user.order);
 }
 
-
+const getOrder = async (req, res) => {
+    const {id} = req.body;
+    const order = await Order.findOne({owner : id});
+    res.json(order)
+}
 module.exports = {
-    addOrder
+    addOrder,
+    getOrder
 }
