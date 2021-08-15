@@ -12,7 +12,7 @@ const orderRouter = require("./routes/order");
 var app = express();
 var mongoose = require("mongoose");
 const db = "mongodb+srv://monggodb-shopee:GfQafsGbrISNYpuQ@mongodbshopee.w72gm.mongodb.net/react-shopee?retryWrites=true&w=majority"
-mongoose.connect("mongodb://localhost:27017/shoppe", {
+mongoose.connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
